@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                let max, sum;
+                if(a < b) max = b;
+                else max = a;
+                if(max < c) max = c;
+
+                sum = a + b + c;
+                if(sum - max > max) return "YES";
+                else {
+                    return "NO";
+                }
+
+            }
+
+            console.log(solution(13, 33, 17));
+        </script>
+    </body>
+</html>
