@@ -1,0 +1,27 @@
+<!-- 일곱 난쟁이 -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let answer = [];
+            for (let i = 0; i < str.length; i++) {
+                str[i] === "A" ? answer +="#" : answer += str[i];
+            }
+            // 모범 답안
+            // let answer = str;
+            // answer = answer.replace(/A/g, '#');
+            return answer;
+        }
+
+        str = "BANANA";
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>
