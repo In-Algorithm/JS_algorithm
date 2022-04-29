@@ -1,0 +1,29 @@
+<!-- 대소문자 변환 -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let arr = []
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === str[i].toUpperCase()) {
+                    arr.push(str[i].toLowerCase())
+                } else {
+                    arr.push( str[i].toUpperCase())
+                }
+            }
+            let answer = arr.join('');
+            return answer;
+        }
+
+        str = "StuDY";
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>
