@@ -1,0 +1,35 @@
+<!-- 가장 긴 문자열 -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+
+<body>
+    <script>
+        function solution(num, str) {
+            // 모범 답안
+            // let answer="";
+            //     for(let x of s){
+            //         if(x===x.toUpperCase()) answer+=x.toLowerCase();
+            //         else answer+=x.toUpperCase();
+            //     }
+            let answer ="";
+            let length = 0;
+            for(let x of str) {
+                if(length < x.length) {
+                    answer = x;
+                    length = x.length;
+                }
+            }            
+            
+            return answer;
+        }
+        num = 5;
+        str = ["teacher", "time", "student", "beautiful", "good"];
+        console.log(solution(num, str));
+    </script>
+</body>
+
+</html>
