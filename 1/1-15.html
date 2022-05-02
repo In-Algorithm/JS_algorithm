@@ -1,0 +1,30 @@
+<!-- 가운데 문자열 출력 -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let answer ="";
+            for(let x of str) {
+                if(str.length % 2 == 0) {
+                    answer += str[str.length/2-1]
+                    answer += str[str.length/2]
+                    return answer;
+                } else {
+                    return answer = str[parseInt(str.length / 2)]
+                }
+            }            
+            
+            return answer;
+        }
+        str = "studye"
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>
