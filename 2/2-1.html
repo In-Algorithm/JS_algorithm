@@ -1,0 +1,28 @@
+<!-- 큰 수 출력하기 -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let answer = [];
+            let prev = 0;
+            for(let x of str) {
+                if(prev < x) {
+                    answer.push(x)
+                }
+                prev = x;
+            }
+
+            return answer;
+        }
+        let str=[7, 3, 9, 5, 6, 12];
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>
