@@ -1,0 +1,29 @@
+<!-- 보이는 학생 -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let answer = 0;
+            let prev = 0;
+            for(let x of str) {
+                if(prev < x) {
+                    answer++;
+                    prev = x;
+                }
+                
+            }
+
+            return answer;
+        }
+        let str=[130, 135, 148, 140, 145, 150, 150, 153];
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>
