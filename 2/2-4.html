@@ -1,0 +1,29 @@
+<!-- 가위 바위 보 -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+
+<body>
+    <script>
+        function solution(score) {
+            let answer = 0;
+            let cnt = 0;
+            for (let x of score) {
+                if(x === 1) {
+                    cnt++;
+                    answer += cnt;
+                } else {
+                    cnt = 0;
+                }
+            }
+            return answer;
+        }
+        let score=[1, 0, 1, 1, 1, 0, 0, 1, 1, 1 ,0];
+        console.log(solution(score));
+    </script>
+</body>
+
+</html>
