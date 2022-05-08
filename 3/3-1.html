@@ -1,0 +1,26 @@
+<!-- 회문 문자열 -->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(str){  
+                let answer ="";
+                let rev = str.toUpperCase().split("").reverse().join(""); 
+                if(str.toUpperCase() === rev) {
+                    answer = "YES"
+                } else {
+                    answer = "NO"
+                }
+                           
+                return answer;
+            }
+
+            let str = "good";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
