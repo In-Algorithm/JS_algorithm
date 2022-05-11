@@ -10,23 +10,27 @@
 <body>
     <script>
         function solution(s) {
-            let answer = "";
-            let cnt = 1;
-            s = s + " ";
-            for (let i = 0; i < s.length - 1; i++) {
-                if (s[i] === s[i + 1]) cnt++;
-                else {
-                    answer += s[i];
-                    if (cnt > 1) answer += String(cnt);
-                    cnt = 1;
+            let answer, max=Number.MIN_SAFE_INTEGER;
+                for(let x of arr){
+                    let sum=0, tmp=x;
+                    while(tmp){
+                        sum+=(tmp%10);
+                        tmp=Math.floor(tmp/10);
+                    }
+                    if(sum>max){
+                        max=sum;
+                        answer=x;
+                    }
+                    else if(sum===max){
+                        if(x>answer) answer=x;
+                    }
                 }
-            }
-            return answer;
+                return answer;
 
 
         }
 
-        let s = "KKHSSSSSSSE";
+        let s = [128, 460, 603, 40, 521, 137, 123];
         console.log(solution(s));
     </script>
 </body>
