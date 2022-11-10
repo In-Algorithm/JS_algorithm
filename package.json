@@ -1,0 +1,22 @@
+{
+  "name": "js_algorithm",
+  "version": "1.0.0",
+  "description": "JavaScript Algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borobong2/JS_algorithm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borobong2/JS_algorithm/issues"
+  },
+  "homepage": "https://github.com/borobong2/JS_algorithm#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
