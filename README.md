@@ -78,3 +78,44 @@ rl.on("line", function (line) {
   process.exit();
 });
 ```
+
+```javascript
+readline;
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+}); // 입출력 인터페이스 객체 rl 생성
+
+//한줄
+rl.on("line", function (line) {
+  // 입력받은 값은 line에 저장된다
+  console.log(line);
+
+  rl.close(); //close가 없으면 입력이 끝나지 않는다
+}).on("close", function () {
+  // 입력이 끝난 후 수행할 코드 입력
+  process.exit();
+});
+
+//공백 기준
+rl.on("line", function (line) {
+  input = line.split(" ").map((el) => parseInt(el));
+  // 문자열을 저장하고 싶으면 map함수를 제외하면 된다
+
+  rl.close();
+}).on("close", function () {
+  console.log(input);
+  process.exit();
+});
+
+//여러 줄 입력받기
+rl.on("line", function (line) {
+  input.push(line);
+  // rl.close()가 없어서 입력을 종료시킬 때는 ctrl+c 단축키를 이용하면 된다
+}).on("close", function () {
+  console.log(input);
+  process.exit();
+});
+```
