@@ -1,18 +1,16 @@
 const fs = require("fs");
 const input = fs.readFileSync("input.txt").toString().split("\n");
-const total = input[0];
-const count = input[1];
+const total = Number(input[0]);
+const count = Number(input[1]);
+input.splice(0, 2);
 let sum = 0;
 
-for (let i of input) {
-  if (total === i || count === i) {
-    continue;
-  }
-  const amount = Number(i.toString().split(" ")[0]);
-  const num = Number(i.toString().split(" ")[1]);
-  sum += amount * num;
+for (let i = 0; i < count; i++) {
+  let [price, num] = input[i].split(" ");
+  sum += Number(price) * Number(num);
 }
-if (total == sum) {
+
+if (total === sum) {
   console.log("Yes");
 } else {
   console.log("No");

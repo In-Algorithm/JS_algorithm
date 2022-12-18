@@ -1,4 +1,5 @@
-const temp = { a: "b" };
-const a = temp.a;
-
-console.log("temp: ", temp, "\na: ", a);
+const disabled = !!"1213" || false;
+const disalbedFunc = () => {};
+if ("" || false) {
+  console.log(disabled);
+}
