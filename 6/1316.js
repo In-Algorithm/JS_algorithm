@@ -18,14 +18,12 @@ const resetArr = () => {
 for (let i of input) {
   resetArr();
   for (let j of i) {
-    if (arr[j.charCodeAt() - 97]) {
+    if (arr[j.charCodeAt() - 97] || prev === j) {
       prev = j;
       arr[j.charCodeAt() - 97] = false;
-    } else if (prev == j) {
-      arr[j.charCodeAt() - 97] = true;
     } else {
+      arr[j.charCodeAt() - 97] = false;
       dontCount = true;
-      break;
     }
   }
   if (!dontCount) {
