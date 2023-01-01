@@ -8,9 +8,12 @@ for (let i of croatiaAlphabet) {
     const letter = i;
     const regexAllCase = new RegExp(letter, "g");
     const counts = replaced_str.split(i).length - 1;
-    replaced_str = replaced_str.replace(regexAllCase, "");
+    replaced_str = replaced_str.replace(regexAllCase, " ");
     count += counts;
   }
 }
+const letter = " ";
+const regexAllCase = new RegExp(letter, "g");
+replaced_str = replaced_str.replace(regexAllCase, "");
 count += replaced_str.length;
 console.log(count);
