@@ -7,5 +7,5 @@ const input = require("fs")
 let time = input[1];
 
 for (let i of time) {
-  console.log(i);
+  console.log(i, time);
 }
