@@ -11,4 +11,5 @@ sortedArr.forEach((value) => {
   prev += Number(value);
   answer += prev;
 });
+
 console.log(answer);
