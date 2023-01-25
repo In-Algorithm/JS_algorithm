@@ -16,4 +16,5 @@ try {
 } catch (err) {
   console.error(err);
   console.log("done");
+  console.log("test");
 }
