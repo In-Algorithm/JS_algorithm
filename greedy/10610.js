@@ -14,5 +14,6 @@ for (let i of arr) {
 if (BigInt(answer) % BigInt(30) === BigInt(0)) {
   console.log(answer);
 } else {
-  console.log(-1);
+  console.log(-1);\
+  
 }
