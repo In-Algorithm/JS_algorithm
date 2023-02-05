@@ -5,6 +5,7 @@ const input = require("fs")
   .split("\n")
   .splice(1)
   .sort((a, b) => a - b);
+
 let answer = 0;
 const sol = (n, list) => {
   for (let i = 0; i < n - 1; i++) {
