@@ -27,7 +27,7 @@ var input = fs
   });
 ```
 
-##여러줄 입력시(n, input)
+## 여러줄 입력시(n, input)
 
 ```javascript
 function solution(n, input) {
