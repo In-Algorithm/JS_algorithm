@@ -1,1 +1,7 @@
-// '깃 테스트용'
+const input = require("fs")
+  .readFileSync("dev/stdin")
+  .toString()
+  .trim()
+  .split("\n");
+
+console.log(answer.toString());
