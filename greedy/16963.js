@@ -1,20 +1,20 @@
-const input = require("fs")
+let [a, b] = require("fs")
   .readFileSync("dev/stdin")
   .toString()
   .trim()
-  .split(" ");
+  .split(" ")
+  .map((v) => +v);
 
-let startNum = Number(input[0]);
-let endNum = Number(input[1]);
-let count = 0;
-console.log(startNum, endNum);
-while (startNum !== endNum) {
-  startNum *= 2;
-  count++;
-  console.log("test", startNum, endNum, count);
-  if (count > 10) {
+let answer = -1;
+const DFS = (A, B, cnt) => {
+  if (A === B) {
+    answer = cnt + 1;
     return;
+  } else {
+    if (A * 2 <= B) DFS(A * 2, B, cnt + 1);
+    if (A * 10 + 1 <= B) DFS(A * 10 + 1, B, cnt + 1);
   }
-}
+};
 
-console.log(count);
+DFS(a, b, 0);
+console.log(answer);
