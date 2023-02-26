@@ -1,7 +1,6 @@
 const input = require("fs").readFileSync("dev/stdin").toString().trim();
 
 const arr = input.toString().split("-");
-console.log("input", [input], arr, input == arr);
 
 let answer = 0;
 let isMinus = arr == input;
@@ -21,6 +20,5 @@ for (let i of arr) {
     continue;
   }
   answer += Number(i);
-  console.log("tt", answer);
 }
 console.log(answer);
