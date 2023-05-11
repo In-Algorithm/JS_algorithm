@@ -47,13 +47,13 @@ rl.on("line", function (line) {
   //로컬에서 입력을 중지하려면 입력을 한 후 ctrl+d로 입력 종료
 }).on("close", function () {
   let n = parseInt(input[0]);
-  let list = input[1].split(" ").map((el) => parseInt(el));
+  let list = input[1].split(" ").map(el => parseInt(el));
   solution(n, list);
   process.exit();
 });
 ```
 
-##여러줄 입력시(input1, input2)
+## 여러줄 입력시(input1, input2)
 
 ```javascript
 function solution(input1, input2) {
@@ -72,8 +72,8 @@ rl.on("line", function (line) {
   //rl.close()가 없어서 계속 입력
   //로컬에서 입력을 중지하려면 입력을 한 후 ctrl+d로 입력 종료
 }).on("close", function () {
-  let list1 = input[0].split(" ").map((el) => parseInt(el));
-  let list2 = input[1].split(" ").map((el) => parseInt(el));
+  let list1 = input[0].split(" ").map(el => parseInt(el));
+  let list2 = input[1].split(" ").map(el => parseInt(el));
   solution(list1, list2);
   process.exit();
 });
@@ -101,7 +101,7 @@ rl.on("line", function (line) {
 
 //공백 기준
 rl.on("line", function (line) {
-  input = line.split(" ").map((el) => parseInt(el));
+  input = line.split(" ").map(el => parseInt(el));
   // 문자열을 저장하고 싶으면 map함수를 제외하면 된다
 
   rl.close();
