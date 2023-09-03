@@ -16,4 +16,6 @@ for (let i = 0; i < n; i++) {
     }
   }
 }
-console.log(n - Math.max(...dp));
+console.log("dp", dp);
+
+console.log(Math.max(...dp));
