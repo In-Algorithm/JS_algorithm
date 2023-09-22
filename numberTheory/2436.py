@@ -1,16 +1,21 @@
-a, b = map(int, input().split())
+def gcd(a, b):
+    while b:
+        mod = b
+        b = a % b
+        a = mod
+    return a
 
 
-def _gcd(a, b):
-    while a % b != 0:
-        temp = a % b
-        a = b
-        b = temp
-    return b
-
-
-def _lcm(a, b):
-    return a * b // _gcd(a, b)
-
-
-print(b // a)
+g, l = map(int, input().split())
+div = l // g
+a, b = 1, div
+for i in range(1, div // 2 + 1):
+    if div % i == 0:
+        c = i
+        d = div // i
+        if gcd(c, d) != 1:
+            continue
+        if a + b > c + d:
+            a = c
+            b = d
+print(a * g, b * g)
