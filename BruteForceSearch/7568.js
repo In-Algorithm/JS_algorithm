@@ -5,6 +5,8 @@ const input = require("fs")
   .split("\n")
   .map((el) => el.split(" ").map((el) => Number(el)));
 let arr = input.slice(1, input.length);
+console.log(" arr", arr);
+
 let result = [];
 
 for (let i = 0; i < arr.length; i++) {
